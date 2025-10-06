@@ -3,7 +3,9 @@ module.exports = {
     {
       name: 'kupipodariday-backend',
       cwd: '/app',
-      script: './src/main.ts',
+      // запускаем компилированный JS (dist), явный интерпретатор node
+      script: './dist/main.js',
+      exec_interpreter: 'node',
       instances: 1,
       exec_mode: 'fork',
       watch: false,
