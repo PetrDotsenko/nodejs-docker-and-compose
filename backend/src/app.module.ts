@@ -17,12 +17,12 @@ import { Wishlist } from './wishlists/entities/wishlist.entity';
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: process.env.DB_HOST || 'localhost',
-      port: Number(process.env.DB_PORT) || 5432,
-      username: process.env.DB_USER || 'student',
-      password: process.env.DB_PASSWORD || 'student_password',
-      database: process.env.DB_NAME || 'kupipodariday',
+     type: 'postgres',
+     host: process.env.POSTGRES_HOST || 'database',
+     port: Number(process.env.POSTGRES_PORT || 5432),
+     username: process.env.POSTGRES_USER || 'student',
+     password: process.env.POSTGRES_PASSWORD || 'student_password',
+     database: process.env.POSTGRES_DB || 'student_db',
       entities: [User, Wish, Offer, Wishlist],
       synchronize: true,
       logging: false,
