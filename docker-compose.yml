@@ -28,7 +28,6 @@ services:
       - database
     ports:
       - "4000:4000"
-    command: ["node", "dist/main.js"]
     networks:
       - kupi_net
     restart: always
@@ -42,7 +41,6 @@ services:
       - ./envs/frontend.env
     ports:
       - "8081:80"
-    command: ["node", "dist/main.js"]
     networks:
       - kupi_net
     restart: always
